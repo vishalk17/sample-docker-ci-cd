@@ -7,7 +7,7 @@ pipeline {
   environment {
     // Define your Docker image tag
     docker_image_name = 'vishalk17/nginx'
-    docker_image_tag = 'v1.7'
+    docker_image_tag = 'v1.8'
     DOCKERHUB_CREDENTIALS = credentials('docker-credential') // stored cred. in jenkins id, here it is docker-credential
   }
 
