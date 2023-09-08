@@ -15,6 +15,7 @@ pipeline {
     stage('Build image') {
       steps {
         // Change to the directory containing your Dockerfile and build the image
+        sh 'pwd && whoami'
         sh "docker build -t ${docker_image_name}:${docker_image_tag} ."
       }
     }
