@@ -3,14 +3,6 @@ pipeline {
         // Use a node with the 'master' label
         label 'master'
     }
-    triggers {
-        // Trigger the build when a new tag is pushed to the repository
-        githubPush(
-            tagsToBuild: [
-                [pattern: 'refs/tags/*']
-            ]
-        )
-    }
     environment {
         // Define your Docker image tag
         docker_image_name = 'vishalk17/nginx'
