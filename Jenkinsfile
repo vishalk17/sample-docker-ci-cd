@@ -6,7 +6,7 @@ pipeline {
         label 'master'
     }
     parameters {
-      string(name: 'token', defaultValue: 'vishal123')
+      string(name: 'token', defaultValue: 'vishal125')
     }
     environment {
         docker_image_name = 'vishalk17/nginx'
