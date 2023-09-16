@@ -5,6 +5,9 @@ pipeline {
     agent {
         label 'master'
     }
+    parameters {
+      string(name: 'token', defaultValue: 'vishal123')
+    }
     environment {
         docker_image_name = 'vishalk17/nginx'
         docker_image_tag = 'v2.0'
@@ -16,7 +19,9 @@ pipeline {
         BUILD_NUMBER = "${env.BUILD_NUMBER}" // Build Number
         is_build_needed = 'y' // Set 'y' to build the image, 'n' to skip building
     }
-
+    when {
+      expression { params['token'] == env.GIT_TOKEN }
+    }
     stages {
         stage('Start Notification') {
             steps {
