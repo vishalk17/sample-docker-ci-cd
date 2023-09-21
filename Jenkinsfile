@@ -49,6 +49,7 @@ pipeline {
         stage('Build image') {
             steps {
                 sh 'pwd && whoami'
+		sh 'git log --oneline -n 10'
                 sh "docker build -t ${docker_image_name}:${docker_image_tag} ."
             }
         }
