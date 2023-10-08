@@ -1,5 +1,5 @@
-def emailRecipients = 'vishal.kapadi@ecosmob.com'
-// for multiple recipients:  def emailRecipients = 'xyz@ecosmob.com,abc@ecosmob.com'
+def emailRecipients = 'vishalkapadi95@gmail.com'
+// for multiple recipients:  def emailRecipients = 'xyz@ecos.com,abc@vishalk17.com'
 
 pipeline {
     agent {
