@@ -27,7 +27,8 @@ pipeline {
                         body: """
                         The job has started.<br>
                         <a href='${BUILD_URL}'>Click here</a> to view the job in Jenkins.<br>
-                        <a href='${CONSOLE_URL}'>Click here</a> to view the console output.
+                        <a href='${CONSOLE_URL}'>Click here</a> to view the console output.<br>
+			<a href='${BLUE_OCEAN_URL}'>Click here</a> to view the Blue Ocean URL.
                         """,
                         to: emailRecipients
                 }
@@ -77,7 +78,8 @@ pipeline {
                 body: """
                 The job has succeeded.<br>
                 <a href='${BUILD_URL}'>Click here</a> to view the job in Jenkins.<br>
-                <a href='${CONSOLE_URL}'>Click here</a> to view the console output.
+                <a href='${CONSOLE_URL}'>Click here</a> to view the console output.<br>
+		<a href='${BLUE_OCEAN_URL}'>Click here</a> to view the Blue Ocean URL.
                 """,
                 to: emailRecipients
         }
@@ -90,7 +92,8 @@ pipeline {
                 body: """
                 The job has failed.<br>
                 <a href='${BUILD_URL}'>Click here</a> to view the job in Jenkins.<br>
-                <a href='${CONSOLE_URL}'>Click here</a> to view the console output.
+                <a href='${CONSOLE_URL}'>Click here</a> to view the console output.<br>
+		<a href='${BLUE_OCEAN_URL}'>Click here</a> to view the Blue Ocean URL.
                 """,
                 to: emailRecipients
         }
